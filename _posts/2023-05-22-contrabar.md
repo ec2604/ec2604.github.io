@@ -42,3 +42,10 @@ Imagine we have a set of environments where an agent is in a 2D world. For all t
 When deploying RL in more realistic settings, data collection at inference time can be quite expensive. Assuming the sim2real gap can be bridged, we'd like to learn a Bayes-optimal policy from simulation, and then explore optimally when adaptation is necessary at inference time. This gives us a strong incentive to learn a Bayes-optimal policy, as we are acting optimally in terms of exploration at inference time and thsu saving potentially precious resources.
 
 # POMDPs and Information States
+
+Let's understand what a POMDP is, and why meta RL is in fact a special kind of POMDP. From there we'll continue to understand what Information Sates are and how they can help us solve the meta RL problem.
+
+## POMDP
+
+A POMDP is a Partially Observable Markov Decision Process. The underlying dynamic system is still an MDP, however whereas in an MDP the states of the process are directly observable by the agent, in a POMDP the agent is only privy to observations $$o$$ which are governed by a distribution $$O$$ that depends on the action and the current state of the MDP. The objective remains the same as with a regular MDP, however the policy in this case must be history dependent, since the process is not markovian in the observations.
+
