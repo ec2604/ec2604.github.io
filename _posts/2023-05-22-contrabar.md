@@ -55,5 +55,17 @@ It turns out that we can think of meta RL as a special type of POMDP, where $$\m
 
 ## Solving a POMDP
 
+As mentioned earlier, because the states are unobservable, the optimal policy must depend on all past observations, actions and rewards. We begin with a simple solution to solving the POMDP problem. We reformulate the POMDP as an MDP in the following manner:
+
+- Define the state at time $$t$$ as the history at time $$t$$:
+
+$$\begin{aligned}
+h_t = \{o_0,r_0,o_1,\dots,o_t,a_1,\dots,a_{t-1}\} \in \mathcal{H}_t 
+\end{aligned}$$
+
+- Define a policy over histories, i.e $$a_t \sim \pi_t(h_t)$$.
+
+We note that the state transitions are indeed markovian, i.e $$\mathcal{P}(o_{t+1}|h_t,a_t) = \mathcal{P}(o_{t+1}|h_t,a_t,h_{t-1},\dots,h_0)$$. 
+
 
 
