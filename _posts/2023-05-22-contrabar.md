@@ -9,10 +9,13 @@ This post assumes a basic working knowledge of Reinforcement Learning (RL) and M
 
 We'll begin by understanding the potential of Meta RL and fast adaptation in RL. From there we'll continue to _POMDPs_ and _information states_, followed by the algorithmic and theoretic contribution of our paper.
 
-# What is the potential of Meta RL?
+# Meta RL in a nutshell
 
-For those with prior experience with RL, learning new tasks can be painfully slow. In an ideal world, we would like our agent to learn a policy over many different tasks, and be able to quickly adapt to new unknown tasks. 
+## Motivation
 
+Those with prior experience with RL know that learning new tasks can be painfully slow. In an ideal world, we would like our agent to learn a policy over many different tasks, and be able to quickly adapt to new unknown tasks. 
+
+## Definition
 Meta RL formalizes this idea into a well-defined mathematical framework. We define each task $$\mathcal{T}$$ as an MDP $$(\mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R})$$, and make the following assumptions:
 
 - A prior $$P$$ over the MDPs 
@@ -24,4 +27,10 @@ $$\begin{aligned}
 max_{\pi} J(\pi) \mathbb{E}_{\mathcal{R},\mathcal{P}} \mathbb{E}_{\pi} \left[ r(s_t,a_t) \right]
 \end{aligned}$$
 
-The optimal solution $$\pi^{*}$$ is termed the Bayes-optimal solution. This solution must take into account the prior over the MDPs as well as the stochasticity of the sampled reward and transition functions. 
+An optimal solution $$\pi^{*}$$ for the meta RL problem is termed a Bayes-optimal policy.
+
+## Bayes-optimality
+
+We know that the Bayes-optimal policy is the optimal for the meta RL problem, but what are the implications of this? Our objective is formulated in such a way that an optimal policy must take into account the prior over the MDPs as well as the stochasticity of the sampled reward and transition functions. This means the policy performs optimal exploration in order to maximize cumulative reward -- essentially a Bayes-optimality adapts quickly.
+
+What does this "fast adaptation" look like? Let us illustrate with a simple example.
