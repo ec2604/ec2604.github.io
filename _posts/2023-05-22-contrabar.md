@@ -24,7 +24,7 @@ Meta RL formalizes this idea into a well-defined mathematical framework. We defi
 In meta RL we wish to find a policy $$\pi$$ that maximizes the following
 
 $$\begin{aligned}
-max_{\pi} J(\pi) \mathbb{E}_{\mathcal{R},\mathcal{P}} \mathbb{E}_{\pi} \left[ r(s_t,a_t) \right]
+J(\pi) = \mathbb{E}_{\mathcal{R},\mathcal{P}} \mathbb{E}_{\pi} \left[ r(s_t,a_t) \right]
 \end{aligned}$$
 
 An optimal solution $$\pi^{*}$$ for the meta RL problem is termed a Bayes-optimal policy.
