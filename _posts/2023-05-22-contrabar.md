@@ -65,7 +65,7 @@ h_t = \{o_0,r_0,o_1,\dots,o_t,a_1,\dots,a_{t-1}\} \in \mathcal{H}_t
 
 - Define a policy over histories, i.e $$a_t \sim \pi_t(h_t)$$.
 
-We note that the state transitions are indeed markovian, i.e $$\mathcal{P}(o_{t+1}|h_t,a_t) = \mathcal{P}(o_{t+1}|h_t,a_t,h_{t-1},\dots,h_0)$$. 
+We note that the state transitions are indeed markovian, i.e $$\mathcal{P}(o_{t+1}|h_t,a_t)$$
 
 
 
