@@ -31,6 +31,8 @@ An optimal solution $$\pi^{*}$$ for the meta RL problem is termed a Bayes-optima
 
 ## Bayes-optimality
 
-We know that the Bayes-optimal policy is the optimal for the meta RL problem, but what are the implications of this? Our objective is formulated in such a way that an optimal policy must take into account the prior over the MDPs as well as the stochasticity of the sampled reward and transition functions. This means the policy performs optimal exploration in order to maximize cumulative reward -- essentially a Bayes-optimality adapts quickly.
+We know that the Bayes-optimal policy is the optimal for the meta RL problem, but what are the implications of this? 
 
-What does this "fast adaptation" look like? Let us illustrate with a simple example.
+Our objective is formulated in such a way that an optimal policy must take into account the prior over the MDPs as well as the stochasticity of the sampled reward and transition functions. This means the policy performs optimal exploration in order to maximize cumulative reward -- essentially a Bayes-optimality adapts quickly. What does this "fast adaptation" look like? Let us illustrate with a simple example.
+
+Imagine we have a set of environments where an agent is in a 2D world. For all the environments, the state and action spaces are both $$\mathbb{R}^2}$$. For each specific environment, the reward is sparse and only given at a small radius around a location on a semi-circle of radius $$1$$. Since only the reward function varies, our prior is uniform over the unit circle. We now ask what should Bayes-optimal behavior look like?
