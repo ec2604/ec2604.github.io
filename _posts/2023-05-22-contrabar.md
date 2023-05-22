@@ -13,10 +13,10 @@ We'll begin by understanding the potential of Meta RL and fast adaptation in RL.
 
 For those with prior experience with RL, learning new tasks can be painfully slow. In an ideal world, we would like our agent to learn a policy over many different tasks, and be able to quickly adapt to new unknown tasks. 
 
-Meta RL formalizes this idea into a well-defined mathematical framework. We define each task $\mathcal{T}$ as an MDP $(\mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R})$, and make the following assumptions:
+Meta RL formalizes this idea into a well-defined mathematical framework. We define each task $\mathcal{T}$ as an MDP $$(\mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R})$$, and make the following assumptions:
 
-- A prior $P$ over the MDPs 
-- The state and action spaces are the same for all tasks, but the reward and transition functions are task specific. $P$ is a distribution over the transition and reward functions: $\mathcal{T} \sim P(\mathcal{P},\mathcal{R})$
+- A prior $$P$$ over the MDPs 
+- The state and action spaces are the same for all tasks, but the reward and transition functions are task specific. $P$ is a distribution over the transition and reward functions: $$\mathcal{T} \sim P(\mathcal{P},\mathcal{R})$$
 
 In meta RL we wish to find a policy $\pi$ that maximizes the following
 
