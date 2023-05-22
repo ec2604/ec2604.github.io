@@ -47,5 +47,13 @@ Let's understand what a POMDP is, and why meta RL is in fact a special kind of P
 
 ## POMDP
 
-A POMDP is a Partially Observable Markov Decision Process. The underlying dynamic system is still an MDP, however whereas in an MDP the states of the process are directly observable by the agent, in a POMDP the agent is only privy to observations $$o$$ which are governed by a distribution $$O$$ that depends on the action and the current state of the MDP. The objective remains the same as with a regular MDP, however the policy in this case must be history dependent, since the process is not markovian in the observations.
+A POMDP is a Partially Observable Markov Decision Process. The underlying dynamic system is still an MDP, however whereas in an MDP the states of the process are directly observable by the agent, in a POMDP the agent is only privy to observations $$o$$ which are governed by a distribution $$O$$ that depends on the action and the current state of the MDP. The objective remains the same as with a regular MDP, however the policy in this case must be history dependent, since the process is not markovian in the observations. Solving POMDPs in general is a difficult but worthy problem, as most interesting problems in the world are POMDPS rather than MDPs (imagine any setting where the state of the world is not fully observable).
+
+## Meta RL as a POMDP
+
+It turns out that we can think of meta RL as a special type of POMDP, where $$\mathcal{P},\mathcal{R}$$ are hidden states that do not change over time. This means that if we are able to solve POMDPs, we can also solve the meta RL problem.
+
+## Solving a POMDP
+
+
 
