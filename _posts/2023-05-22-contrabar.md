@@ -18,6 +18,8 @@ Meta RL formalizes this idea into a well-defined mathematical framework. We defi
 - A prior $P$ over the MDPs 
 - The state and action spaces are the same for all tasks, but the reward and transition functions are task specific. $P$ is a distribution over the transition and reward functions: $\mathcal{T} \sim P(\mathcal{P},\mathcal{R})$
 
-In meta RL we wish to find a policy $\pi$ that maximizes the following $max_{\pi} J(\pi)$
+In meta RL we wish to find a policy $\pi$ that maximizes the following:
+
+$$max_{\pi} J(\pi)$$
 
 The optimal solution $\pi^{*}$ is termed the Bayes-optimal solution. This solution must take into account the prior over the MDPs as well as the stochasticity of the sampled reward and transition functions. 
