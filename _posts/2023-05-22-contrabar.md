@@ -20,7 +20,7 @@ Meta RL formalizes this idea into a well-defined mathematical framework. We defi
 
 In meta RL we wish to find a policy $\pi$ that maximizes the following:
 
-$$ max_{\pi} J(\pi)= \mathbb{E}_{\mathcal{P},\mathcal{R}\sim P}$$
+$$ max_{\pi} J(\pi)= \mathbb{E}_{\mathcal{P},\mathcal{R}}$$
 
 
 The optimal solution $\pi^{*}$ is termed the Bayes-optimal solution. This solution must take into account the prior over the MDPs as well as the stochasticity of the sampled reward and transition functions. 
